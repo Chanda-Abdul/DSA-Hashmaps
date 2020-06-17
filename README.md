@@ -45,7 +45,7 @@ const WhatDoesThisDo = function(){
 - 2) Show your hash map after the insertion of the keys `5, 28, 19, 15, 20, 33, 12, 17, 10` into the hash map with collisions resolved by separate chaining. Let the hash table have a length `m = 9`, and let the hash function be `k` mod `m`.
 
 ## 4. Remove duplicates
-Implement a function to delete all duplicated characters in a string and keep only the first occurrence of each character. For example, if the input is string “google”, the result after deletion is “gole”. Test your program with a sentence as well such as "google all that you think can think of".
+Implement a function to delete all duplicated characters in a string and keep only the first occurrence of each character. For example, if the input is string `“google”`, the result after deletion is `“gole”`. Test your program with a sentence as well such as `"google all that you think can think of"`.
 
 ## 5. Any permutation a palindrome
 Write an algorithm to check whether any permutation of a string is a palindrome. Given the string "acecarr", the algorithm should return true, because the letters in "acecarr" can be rearranged to "racecar", which is a palindrome. In contrast, given the word "north", the algorithm should return false, because there's no way to rearrange those letters to be a palindrome.
