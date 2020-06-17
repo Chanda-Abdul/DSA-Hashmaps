@@ -51,7 +51,7 @@ Implement a function to delete all duplicated characters in a string and keep on
 Write an algorithm to check whether any permutation of a string is a palindrome. Given the string `"acecarr"`, the algorithm should return true, because the letters in `"acecarr"` can be rearranged to `"racecar"`, which is a palindrome. In contrast, given the word `"north"`, the algorithm should return false, because there's no way to rearrange those letters to be a palindrome.
 
 ## 6. Anagram grouping
-Write an algorithm to group a list of words into anagrams. For example, if the input was ['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race'], the output should be: [['east', 'teas', 'eats'], ['cars', 'arcs'], ['acre', 'race']].
+Write an algorithm to group a list of words into anagrams. For example, if the input was `['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race']`, the output should be: `[['east', 'teas', 'eats'], ['cars', 'arcs'], ['acre', 'race']]`.
 
 ## 7. Separate Chaining
 Write another hash map implementation as above, but use separate chaining as the collision resolution mechanism.
