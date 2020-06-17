@@ -8,7 +8,7 @@ class HashMap {
     this._deleted = 0;
   }
   
-  get(key) {
+    get(key) {
     const index = this._findSlot(key);
     if (this._hashTable[index] === undefined) {
       throw new Error('key error');
@@ -16,7 +16,7 @@ class HashMap {
     return this._hashTable[index].value;
   }
   
-  set (key, value) {
+   set (key, value) {
     const loadRatio = (this.length + this._deleted + 1) / this._capacity;
     if (loadRatio > HashMap.MAX_LOAD_RATIO) {
       this._resize(this._capacity * HashMap.SIZE_RATIO);
@@ -24,7 +24,7 @@ class HashMap {
     //Find the slot where this key should be in 
     const index = this._findSlot(key);
     
-    if(!this._hasTable[index]) {
+    if(!this._hashTable[index]) {
       this.length++;
     }
     this._hashTable[index] = {
@@ -34,7 +34,7 @@ class HashMap {
     };
   }
   
-  delete(key) {
+    delete(key) {
     const index = this._findSlot(key);
     const slot = this._hashTable[index];
     if (slot === undefined) {
@@ -45,7 +45,7 @@ class HashMap {
     this._deleted++;
   }
   
-    _findSlot(key) {
+  _findSlot(key) {
       const hash = HashMap._hashString(key);
       const start = hash % this._capacity;
       
@@ -72,21 +72,15 @@ class HashMap {
     }
   }
   
-  
   static _hashString(string) {
-        let hash = 5381;
-        for (let i = 0; i < string.length; i++) {
-            //Bitwise left shift with 5 0s - this would be similar to
-            //hash*31, 31 being the decent prime number
-            //but bit shifting is a faster way to do this
-            //tradeoff is understandability
-            hash = (hash << 5) + hash + string.charCodeAt(i);
-            //converting hash to a 32 bit integer
-            hash = hash & hash;
-        }
-        //making sure hash is unsigned - meaning non-negtive number. 
-        return hash >>> 0;
-    } 
+    let hash = 5381
+    for (let i = 0; i < string.length; i++) {
+      hash = (hash << 5) + hash + string.charCodeAt(i)
+      
+      hash = hash & hash
+    }
+    return hash >>> 0
+  }
 }
-
+  
 module.exports = HashMap
